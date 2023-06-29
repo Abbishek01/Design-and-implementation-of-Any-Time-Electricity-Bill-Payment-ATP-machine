@@ -1,0 +1,106 @@
+ Design and Implementation of Any Time Electricity Bill Payment Machine Controller
+Abstract:
+
+An alternative architecture and execution of a Perpetual Electrical Bill Deposit Apparatus (PEBDA) regulator is exhibited herein. With the burgeoning call for expedient and effectual liquidation modes, a PEBDA contraption proffers an easy to understand interface permitting purchasers to satisfy their electrical invoices at whatsoever instant sans the requirement for manual intercession. The objective of this venture is to formulate an unbending and protected regulator arrangement permitting seamless dealings whilst safeguarding the precision and dependability of disbursement processing.
+
+The shown contraption encompasses constituents of the physical and digital kinds. Included in the physical are a tactile visual interface, a miniature governing element, a means of exchange terminus, and modules for exchanging information. The tactile visual interface furnishes an intuitive interface for users, sanctioning consumers to submit billing particulars in a secure fashion. The miniature governing element serves as the prime processor, accountable for supervising user interactions, handling payment transfers, and conferring with peripheral mechanisms.
+
+The component relies on stable system software, money transfer computations, and contact standards. The system software maintains user data safety and guards against probable security problems. The money transfer computations deal with assorted payment types, for instance card/debit cards, portable wallets, and online payment systems, guaranteeing dependable and capable exchange handling. Contact standards enable consistent joining with utility organizations' backend frameworks, empowering ongoing information trade and charging data refreshing.
+
+The exhaustive trials and evaluations are undertaken to guarantee the durability and dependability of the ATEBP device regulator. Assorted experimental situations are performed to assess the capability, precision, and safety of the framework. Moreover, strict quality control steps are executed to pinpoint and remedy any conceivable framework weaknesses or productivity impediments.
+
+The outcomes of this analysis exhibit the effective creation and execution of an ATEBP apparatus regulator that permits purchasers to conveniently settle their power charges whenever. The framework gives a protected and easy to understand interface while guaranteeing productive installment preparing and consistent reconciliation with utility organizations' backend frameworks. The proposed controller has the capability to improve the general purchaser experience and streamline the charging procedure for both shoppers and utility organizations
+
+Bill Payment Use Case
+
+
+User
+Use case diagram for Design and Implementation of Any Time Electricity Bill Payment machine controller
+
+ChatGPT
+Sure! Here's a possible use case diagram for the design and implementation of an Any Time Electricity Bill Payment machine controller:
+
+sql
+Copy code
+                    User
+                     |
+            +--------|--------+
+            |                 |
+      Make Bill           View Bill
+      Payment             Details
+        |                    |
+        |                +---|----+
+        |                |        |
+      Select             |    Print Bill
+    Electricity          |    Receipt
+      Provider           |
+        |                |
+        |           +----|----+
+        |           |         |
+     Enter          |   Process Payment
+   Customer ID      |   and Generate
+     and Amount     |    Transaction
+        |           |     Confirmation
+        |           |
+   +----|----+      |
+   |         |      |
+ Process   Verify   |
+ Payment   Payment  |
+   |         |      |
+   +----|----+      |
+        |           |
+     Update        |
+  Payment Status   |
+        |           |
+        +-----------+
+             |
+   Any Time Electricity
+   Bill Payment Machine
+     Controller
+In this use case diagram, there are three primary actors: User, Any Time Electricity Bill Payment Machine Controller, and Electricity Provider. The interactions between these actors are represented by use cases.
+
+The main use cases identified are as follows:
+
+Make Bill Payment: The user initiates the process by selecting an electricity provider and entering their customer ID and the amount to be paid. The payment is processed and a transaction confirmation is generated.
+
+View Bill Details: The user can view the details of their electricity bill, such as current charges, due date, and previous payment history.
+
+Print Bill Receipt: The user has the option to print a receipt after making the bill payment. This receipt serves as proof of payment.
+
+Process Payment and Generate Transaction Confirmation: The Any Time Electricity Bill Payment Machine Controller handles the payment processing, verifies the payment, updates the payment status, and generates a transaction confirmation for the user.
+
+Select Electricity Provider: The user can select the electricity provider they are associated with for the bill payment.
+
+Enter Customer ID and Amount: The user enters their customer ID and the amount they wish to pay for their electricity bill.
+
+Verify Payment: The Any Time Electricity Bill Payment Machine Controller verifies the payment details provided by the user, ensuring that the customer ID and payment amount are accurate.
+
+Update Payment Status: After successful payment verification, the Any Time Electricity Bill Payment Machine Controller updates the payment status for the user's electricity bill.
+
+These use cases represent the major functionalities and interactions involved in the design and implementation of an Any Time Electricity Bill Payment machine controller.
+
+
+# Function to calculate the electricity bill
+
+
+def calculateBill(units):
+    charges = [10, 15, 20, 25]
+    # changed variable name from 'range' to 'range_'
+    range_ = [100, 100, 100, MAX_INT]
+    bill = 0
+
+    for i in range(n):
+        if units <= range_[i]:
+            bill += charges[i] * units
+            break
+        else:
+            bill += charges[i] * range_[i]
+            units -= range_[i]
+
+    return bill
+
+
+# Driver code
+units=int(input("enter the unit used: "))
+Print(unit," ", type(units))
+print(calculateBill(units))
