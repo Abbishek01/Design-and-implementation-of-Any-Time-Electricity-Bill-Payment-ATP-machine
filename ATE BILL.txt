@@ -80,9 +80,10 @@ Update Payment Status: After successful payment verification, the Any Time Elect
 These use cases represent the major functionalities and interactions involved in the design and implementation of an Any Time Electricity Bill Payment machine controller.
 
 
-# Function to calculate the electricity bill
+import sys
 
-
+MAX_INT = sys.maxsize
+n = 4
 def calculateBill(units):
     charges = [10, 15, 20, 25]
     # changed variable name from 'range' to 'range_'
@@ -102,5 +103,5 @@ def calculateBill(units):
 
 # Driver code
 units=int(input("enter the unit used: "))
-Print(unit," ", type(units))
+print(units," ", type(units))
 print(calculateBill(units))
